@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.hrd1{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.hdr {
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-secundario);
+    border-bottom: dotted black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo-container {
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    z-index: 1000;
+    height: auto;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.nav-links {
+    width: 40%;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-evenly;
+}
+
+/* Estilos generales para los botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+body{
+    overflow: hidden;
+    margin: 0;
+}
+
+form{
+    z-index: 2;
+}
+.burbuja {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.493);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: burbujeo linear infinite;
+    z-index: 1;
+    -webkit-animation: burbujeo linear infinite;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+@keyframes burbujeo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+}
+
+header section a{
+    font-size: 1.5rem;
+    margin: 0px 50px;
+}
+
+.iniciar_sesion{
+    height: 90vh;
+    position: absolute;
+}
+.color{
+    background-color: rgb(255, 201, 53);
+    position: absolute;
+    height: 100%;
+    width: 40vw;
+    z-index: -1;
+}
+.cont_is_txt{
+    height: 90vh;
+    width: 40vw;
+}
+.txt_is{
+    width: 20vw;
+    position: relative;
+}
+.txt_is img{
+    width: 100%;
+    z-index: 1000;
+}
+.cont_txt_is_col{
+    box-shadow: -3px -5px 20px 5px rgba(0, 0, 0, 0.2);
+}
+.txt_tt_is{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+    z-index: 1000;
+}
+.form_cont_is{
+    height: 90vh;
+    width: 59vw;z-index: 1000;
+}
+.txt_nr_is, .txt_nr_is_btn{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1000;
+}
+.txt_nr_is_btn{
+    border: none;
+    z-index: 1000;
+}
+
+.input-group-append{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    margin-left: 20px;
+}

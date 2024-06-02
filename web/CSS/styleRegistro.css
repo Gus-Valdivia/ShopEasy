@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    width: 1368px;
+    height: 705px;
+}
+
+.container{
+    font-family: 'Itim', cursive;
+    position: relative;
+    margin: 0 auto;
+    width: 1365px;
+    max-width: 100%;
+    height: 650px;
+    overflow: hidden;
+    left:0px;
+    top: -800px;
+}
+
+.hero{
+    background-color: #FFD155;
+    width:  1366px;
+    height: 100vh;
+    color: #000000;
+}
+
+.nav{
+    --state-close: scale(0);
+    --state-hamburguer:scale(1);
+    --state-menu: translate(-100%);
+
+    padding: 40px 0;
+    display:grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 10px;
+}
+
+.nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer:scale(0);
+}
+
+.nav__logo {
+    font-family: 'Itim', cursive;
+    position: relative;
+    font-size: 2rem;
+    z-index: 4;
+    top: -30px;
+    right: 950px;
+    width: 250px;
+    grid-column: 2/3;
+}
+
+.nav__hamburguer,
+.nav__close {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    position: relative;
+    top: -30px; 
+    left: 0;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+    z-index: 4;
+}
+
+.nav__hamburguer {
+    left: 80px;
+    transform: var(--state-hamburguer);
+    grid-column: 1/2;
+}
+
+.nav__close{
+    left: 80px;
+    transform: var(--state-close);
+    grid-column: 1/2;
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+.nav__links{
+    height: 650px;
+    width: 368px;
+    background-color: #FF9800;
+    position: relative;
+    top: -85px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    padding: 0;
+    font-size: 2rem;
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 3%;
+    z-index: 3;
+    
+    transform: var(--state-menu);
+    transition: .3 transform;
+}
+
+    .nav__item{
+        list-style: none;
+    }
+
+    .nav__link{
+        color:#000;
+        text-decoration: none;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .fig1{
+        position: relative;
+        left: 874px;
+    }
+    .fig2{
+        position: relative;
+        right: 324.5px;
+        bottom: -122px;
+
+    }
+        .fig3{
+        position: relative;
+        left: 448px;
+        bottom: -306px;
+    }
+    
+    .formulario{
+        font-family: 'Itim', cursive;
+        width: 915px;
+        position: absolute;
+        top: 60px;
+        left: 142px;
+    }
+
+    .inpS{
+        font-family: 'Itim', cursive;
+        font-size: 21px;
+        display: flex;
+        width: 270px;
+        height: 60px;
+        padding: 24px 68px 24px 69px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 0;
+        position: relative;
+        top: 24px;
+
+        border-radius: 50px;
+        background: #FF9800;
+
+        position: relative;
+        left: 300px;
+    }
+    
+    .fondo{
+        height: 415px;
+        width: 915px;
+        background-color: #fff;
+    }
+    
+    .inp{
+        width: 358px;
+        height: 46px;
+        flex-shrink: 0;
+        border-radius: 50px;
+        background: rgba(255, 152, 0, 0.28);
+        border:0px;
+    }
+    
+    .lbl{
+        width: 95px;
+        height: 28px;
+        flex-shrink: 0;
+
+        color: #000;
+        font-family: 'Itim';
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .Duser{
+        width: 358px;
+        position: relative;
+        left:30%;
+        top: 24px;
+    }
+    .Dpass{
+        width: 358px;
+        position: relative;
+        left: 30%;
+        top: 52px;
+    }
+    .Dname{
+        width: 358px;
+        position: relative;
+        left: 10%;
+        top: 73px;
+    }
+    .Dtel{
+        width: 358px;
+        position: relative;
+        top: 0px;
+        left: 500px;
+    }
+    .Demail{
+        width: 358px;
+        position: relative;
+        top: 24px;
+        left: 30%;
+    }
+

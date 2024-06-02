@@ -1,0 +1,69 @@
+<html class="overflow-hidden">
+
+    <head>
+        <title>Iniciar Sesion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/styleInicioSesion.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/General/nav.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/General/normalize.css">
+        <link rel="stylesheet" href="CSS/Datos/iniciar_sesion.css">
+    </head>
+
+    <body>
+        <header class="hdr">
+            <header class=" d-flex w-100 justify-content-between p-2 align-items-center">
+                <section class="d-flex align-items-center ">
+                    <img src="assets/Brand/logo.png" class="logo">
+                    <a href="index.jsp">ShopEasy</a>
+                </section>
+                <section>
+                    <a href="inicio_sesion.html" class="btn btn-light btn_nav btn_navs"><i class="bi bi-person-fill"></i>
+                        Iniciar
+                        Sesión</a>
+                    <a href="Registro.html" class="btn btn-dark btn_nav btn_navr">Registrarse</a>
+                </section>
+            </header>
+        </header>
+
+        <div
+            class="iniciar_sesion d-flex justify-content-between btns_ir justify-content-center align-items-center w-100 is_cont_form">
+            <section class="color" id="yellow1"></section>
+            <section class="cont_is_txt d-flex justify-content-end align-items-center">
+                <section class="h-75 txt_is w-50 cont_txt_is_col">
+                    <section class="d-flex flex-column h-100 w-100 justify-content-center align-items-center">
+                        <img src="assets/Brand/logo.png" class="w-100">
+                        <span class="txt_tt_is">ShopEasy</span>
+                        <span>TechCode "Typing the future"</span>
+                    </section>
+                </section>
+            </section>
+            <form action="/EasyShop/InicioSesionServlet" method="post" class="d-flex form_cont_is align-items-center justify-content-start">
+                <section class="d-flex flex-column justify-content-evenly align-items-center h-75 w-75 cont_txt_is_col p-3">
+                    <span class="txt_tt_is">Iniciar Sesión</span>
+                    <section class="d-flex flex-column w-50 ">
+                        <label for="username" class="txt_nr_is">Usuario:</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Ingrese su Nombre de Usuario">
+                    </section>
+                    <section class="d-flex flex-column w-50">
+                        <label for="password" class="txt_nr_is">Contraseña</label>
+                        <div class="input-group-append">
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Ingrese su contraseña">
+                            <button class="btn btn-outline-secondary" type="button" id="showPasswordButton">Mostrar</button>
+                        </div>
+                    </section>
+                    <button type="submit" class="w-50 txt_nr_is_btn btn btn-dark">Iniciar Sesión</button>
+                </section>
+            </form>
+        </div>
+        <script src="JS/bubble.js"></script>
+        <script src="JS/mostrarContrasenna.js"></script>
+    </body>
+
+</html>
