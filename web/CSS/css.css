@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,20 +16,20 @@
 /*Input Buscador*/
 /* Estilo para el input de buscador */
 #inputbuscar {
-  width: 300px; /* Ancho del input */
-  padding: 10px; /* Espaciado interno */
-  border: 2px solid #ddd; /* Borde */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
-  background-color: #fff; /* Color de fondo */
-  transition: border-color 0.3s ease; /* Transición suave del borde */
+    width: 300px; /* Ancho del input */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #ddd; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    background-color: #fff; /* Color de fondo */
+    transition: border-color 0.3s ease; /* Transición suave del borde */
 }
 
 /* Estilo para cuando el input está enfocado */
 #inputbuscar:focus {
-  border-color: #f0c419; /* Cambio de color del borde al enfocar */
-  outline: none; /* Quita el borde de enfoque predeterminado */
+    border-color: #f0c419; /* Cambio de color del borde al enfocar */
+    outline: none; /* Quita el borde de enfoque predeterminado */
 }
 
 .buscador{
@@ -68,7 +68,6 @@
 }
 
 body {
-    background-color: var(--color-primario);
     overflow-x: hidden;
 }
 
@@ -87,35 +86,63 @@ body {
     position:static;
     z-index: 10;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-secundario);
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.6);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    padding-left: 3%;
+    padding-right: 2%;
+    transition: 0.2s;
+    margin-top: 2%;
+    transition: 0.2s;
 }
 
-.logo-container {
+.hdr_scroll {
+    margin-top: 0%;
+    transition: 0.2s;
+}
+
+#index_hdr .logo-container {
     display: flex;
     align-items: center;
+    height: 100%;
+    gap: 5%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+    width: 20%;
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 .company-name {
-    font-size: 20px;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.company_name_scroll{
+    color: black;
 }
 
 .nav-links {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
+    transition: 0.2s;
+}
+
+.nav-links_scroll {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0;
+    transition: 0.2s;
 }
 
 /* Estilos generales para los botones */
@@ -144,9 +171,9 @@ body {
 .button-dark {
     color: #fff;
     /* Color del texto */
-    background-color: #343a40;
+    background-color: black;
     /* Color de fondo oscuro */
-    border: 1px solid #343a40;
+    border: 5px solid #343a40;
     /* Borde */
 }
 
@@ -168,11 +195,14 @@ body {
     border-bottom: 15px solid white;
 }
 
+.carousel-inner img{
+    filter: brightness(80%);
+}
+
 .sectionCarrousel {
-    height: 70vh;
+    height: 100%;
     position: relative;
     z-index: 1;
-    margin-top: 2.5%;
     border-bottom: 5px solid white;
 }
 
@@ -180,45 +210,53 @@ body {
 
 .TituloSHOP {
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
+    font-size: 3.4rem;
     font-weight: bold;
     color: white;
-    text-shadow: 3px 3px 1px rgb(206, 93, 0);
+    text-shadow: 3px 3px 1px #c38e00;
 }
 
 /* Estilos para el contenedor de la sección */
 .section-container {
-    background-color: var(--color-primario);
-    padding: 5%;
-    justify-content: space-between;
-    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.8) 5%, rgba(0,0,0,0)), url("../assets/Backgrounds/bg.jpg");
+    padding: 3%;
+    padding-bottom: 3%;
+    padding-top: 7%;
+    justify-content: center;
+    align-items: start;
     display: flex;
     flex-direction: column;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 93.5vh;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    gap: 2%;
 }
 
 .Comentario {
-    margin-top: 50px;
+    margin-top: 2%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     position: relative;
 }
 
 /* Estilos para el texto descriptivo */
 .desc_neg {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.65);
     padding: 1%;
     border-radius: 15px;
-    width: 50%;
+    width: 70%;
     display: flex;
-    text-align: center;
+    text-align: justify;
     align-items: center;
     -webkit-border-radius: 15px;
+    color: white;
 }
 
 .desc_pos {
@@ -236,10 +274,8 @@ body {
 
 /*Estilos Para la barra de marcas*/
 .sectionMarcas {
-    height: 200px;
-    background-color: var(--color-oscuro);
-    border-top: 15px solid white;
-    border-bottom: 15px solid white;
+    height: 50px;
+    background-color: var(--color-primario);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,45 +284,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2%;
+    margin-bottom: 0.5%;
 }
 
-/* Establece la lista para que se muestre en línea y no tenga viñetas */
 .marcas1 {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 5%;
-    /* Cambia la dirección de visualización a horizontal */
+    width: 100%;
+    justify-content: space-around;
 }
 
-/* Establece el estilo de cada elemento de la lista */
 .marcas1 li {
     margin-right: 10px;
-    /* Espacio entre los elementos */
 
 }
 
 .marcas1 i {
-    color: var(--color-secundario);
+    color: black;
     font-size: 2rem;
 }
 
-/* Establece el estilo del último elemento para que no tenga margen derecho */
 .marcas1 li:last-child {
     margin-right: 0;
 }
 
-/* Estilos generales para el footer */
 .footer {
-    background-color: #333;
+    background-color: #a76c11;
     color: #fff;
-    padding: 30px 0;
+    padding-top: 30px;
+    height: 35vh;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around;
+    height: 100%;
+    padding-bottom: 30px;
 }
 
 .footer-section {
@@ -312,9 +348,10 @@ body {
 }
 
 .footer-bottom {
-    background-color: #222;
+    background-color: black;
     text-align: center;
     padding: 10px 0;
+    color: white;
 }
 
 /* Estilos para hacer el footer responsive */
@@ -350,13 +387,12 @@ body {
 
 .TituloSHOP1 {
     width: 100%;
-    height: 5px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 4rem;
     font-weight: bold;
-    color: white;
-    text-shadow: 3px 3px 1px rgb(206, 93, 0);
+    color: black;
+    text-shadow: 3px 3px 1px var(--color-primario);
 }
 
 .Roles {
@@ -364,7 +400,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--color-primario);
+    background-image: linear-gradient( 107.7deg,  rgba(235,230,44,0.55) 8.4%, rgba(252,152,15,1) 90.3% );;
     height: 100vh;
 }
 
@@ -378,12 +414,16 @@ body {
     justify-content: center;
     align-items: center;
     transition: all 0.4s;
+    opacity: 0.6;
+    transition: 0.4s;
 }
 
 .rol:hover {
+    transition: 0.4s;
     transform: translateY(-30px);
-    background-color: var(--color-oscuro);
+    background-color: black;
     color: var(--color-secundario);
+    opacity: 1;
 }
 
 .rol i {
@@ -413,30 +453,33 @@ body {
 }
 
 .seleccionado {
-    background-color: var(--color-oscuro);
+    background-color: black;
     color: var(--color-secundario);
+    border: 5px solid black;
+    opacity: 1;
 }
 
 /*PAGÍNA INICIO CLIENTE*/
 
 .panel-izquierdo {
-    width: 250px;
+    width: 15vw;
     height: 100vh;
     background-color: #ffff;
     position: fixed;
-    top: 10;
+    top: 10%;
     left: 0;
     padding: 20px;
-    
+
 }
 
 .panel-derecho {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    /* Permitir desplazamiento vertical si el contenido excede el tamaño */
-    margin-left: 250px;
-    /* Ajusta el margen izquierdo para que no quede detrás del panel izquierdo */
+    overflow-y: scroll;
+    right: 0;
+    position: absolute;
+    top: 12%;
+    width: 82.5vw;
+    padding-top: 0;
+    height: 88vh;
 }
 
 hr {
@@ -451,8 +494,8 @@ hr {
 
 .panel-izquierdo ol li {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: start;
     margin-top: 30px;
     cursor: pointer;
     font-size: 1.5rem;
@@ -479,10 +522,7 @@ hr {
 }
 
 .panel-derecho {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left:  1px dotted black;
+    border-left: 5px solid white;
 }
 
 .TituloSHOP2 {
@@ -510,18 +550,16 @@ hr {
 .productCard1 {
     text-align: center;
     background-color: #fff;
-    border: dotted var(--color-oscuro);
-    border-radius: 10px;
     cursor: pointer;
-    width: 20%;
-    max-height: 300px;
-    min-height: 350px;
+    width: 28%;
+    height: 320px;
     margin: 25px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     transition: all 0.4s;
+    box-shadow: 4px 6px 0px rgba(0,0,0,0.2);
 }
 
 .productCard1:hover {
@@ -732,25 +770,25 @@ hr {
 }
 
 .imagen {
-      padding: 10px 20px;
-      border: 2px solid #ddd;
-      border-radius: 5px;
-      background-color: #f0f0f0;
-      color: #333;
-      font-size: 16px;
-      cursor: pointer;
-      outline: none; /* Quita el contorno al enfocar */
-    }
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none; /* Quita el contorno al enfocar */
+}
 
-    /* Cambio de estilo al pasar el mouse */
-   .imagen:hover {
-      background-color: #e0e0e0;
-    }
+/* Cambio de estilo al pasar el mouse */
+.imagen:hover {
+    background-color: #e0e0e0;
+}
 
-    /* Cambio de estilo al hacer clic */
-    .imagen:active {
-      background-color: #d0d0d0;
-    }
+/* Cambio de estilo al hacer clic */
+.imagen:active {
+    background-color: #d0d0d0;
+}
 
 .imagen-preview {
     width: 80%;
@@ -931,30 +969,6 @@ apartadoDash2{
     color:#333;
     background: linear-gradient(to bottom, #f5f5cc, #e0e0e0);
 }
-.nav-links a{
-    border-radius: 15px;
-    font-weight: bold;
-}
-.btn_is{
-    border: 3px solid black;
-}
-.btn_reg{
-    border: none;
-}
-.nav-links a:hover{
-    text-decoration: none;
-}
-.nav-links a:first-child:hover{
-    transition: 0.2s;
-    border: 3px solid rgb(206, 93, 0);
-    color: rgb(206, 93, 0);
-    background: white;
-}
-.nav-links a:last-child:hover{
-    transition: 0.2s;
-    background: rgb(206, 93, 0);
-    color: white
-}
 .section_pres{
     position: absolute;
     height: 100%;
@@ -966,4 +980,102 @@ apartadoDash2{
 .TituloPrincipal{
     position: relative;
     z-index: 1;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.2s;
+    border: 2px solid var(--color-primario);
+    padding: 1.5%;
+    border-radius: 25px;
+
+}
+.nav-links a:hover{
+    transition: 0.2s;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background: var(--color-primario);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+.scrolled{
+    background: black;
+    padding-left: 2%;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.5);
+}
+.logo-container-scroll{
+    background: white;
+    color: black;
+}
+.bnv_es{ 
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+}
+.bnv_es span{ 
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.section-container button{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.2s;
+    border: 2px solid var(--color-primario);
+    padding: 8px;
+    border-radius: 25px;
+    background: none;
+}
+.section-container button:hover{
+    transition: 0.2s;
+    background: var(--color-primario);
+    color: black;
+    transform: scale(1.1); 
+}
+.index{
+    overflow: hidden;
+}
+.Roles div{
+    cursor: pointer;
+}
+.Roles div:active{
+    transition: 0.2s;
+    transform: scale(1);
+}
+body{
+    height: 99vh;
+    width: 100%;
+}
+#txt{
+    display: flex;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.panel-derecho .section-container{
+    padding-top: 0.5%;
+}
+.img_pro_card{
+    width: 100%;
+    height: 60%;
+    background: #ffedc9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.img_log_pc{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    height: 60px;
+    width: 60px;
+}
+.productCard1 h3{
+    color: #660001;
 }

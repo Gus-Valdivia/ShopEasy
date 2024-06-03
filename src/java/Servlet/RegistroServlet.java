@@ -44,7 +44,7 @@ public class RegistroServlet extends HttpServlet {
             response.sendRedirect("SeleccionarRol.jsp");
         } else {
             System.out.println("Algo falló");
-            response.sendRedirect("Error.jsp");
+            response.sendRedirect("error.jsp");
         }
     }
 

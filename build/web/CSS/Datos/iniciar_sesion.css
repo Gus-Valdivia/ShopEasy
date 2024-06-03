@@ -2,47 +2,11 @@
 .hrd1{
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     top: 0;
     left: 0;
 }
 
-.hdr {
-    z-index: 1000;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-secundario);
-    border-bottom: dotted black;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-}
-
-.logo-container {
-    display: flex;
-    z-index: 1000;
-    align-items: center;
-}
-
-.logo {
-    width: 100px;
-    z-index: 1000;
-    height: auto;
-    margin-right: 10px;
-}
-
-.company-name {
-    font-size: 20px;
-    z-index: 1000;
-}
-
-.nav-links {
-    width: 40%;
-    display: flex;
-    z-index: 1000;
-    justify-content: space-evenly;
-}
 
 /* Estilos generales para los botones */
 .button {
@@ -54,16 +18,10 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 1000;
-}
-
-body{
-    overflow: hidden;
-    margin: 0;
 }
 
 form{
-    z-index: 2;
+    z-index: 1;
 }
 .burbuja {
     position: absolute;
@@ -95,6 +53,8 @@ header section a{
 .iniciar_sesion{
     height: 90vh;
     position: absolute;
+    bottom: 0;
+    background-image: linear-gradient( 107.7deg,  rgba(235,230,44,0.55) 8.4%, rgba(252,152,15,1) 90.3% );
 }
 .color{
     background-color: rgb(255, 201, 53);
@@ -105,7 +65,7 @@ header section a{
 }
 .cont_is_txt{
     height: 90vh;
-    width: 40vw;
+    width: 50vw;
 }
 .txt_is{
     width: 20vw;
@@ -113,39 +73,236 @@ header section a{
 }
 .txt_is img{
     width: 100%;
-    z-index: 1000;
-}
-.cont_txt_is_col{
-    box-shadow: -3px -5px 20px 5px rgba(0, 0, 0, 0.2);
 }
 .txt_tt_is{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 2rem;
     color: black;
-    z-index: 1000;
 }
 .form_cont_is{
     height: 90vh;
-    width: 59vw;z-index: 1000;
+    width: 49vw;
 }
 .txt_nr_is, .txt_nr_is_btn{
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    z-index: 1000;
 }
 .txt_nr_is_btn{
     border: none;
-    z-index: 1000;
 }
 
 .input-group-append{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .btn{
-    margin-left: 20px;
+    border: 5px solid var(--color-primario);
+    background: none;
+    color: black;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+.btn:hover{
+    transition: 0.2s;
+    background: var(--color-primario);
+    border: 5px solid var(--color-primario);
+    color: black;
+    transform: scale(1.1);
+}
+#is_hdr{
+    margin-top: 0;
+    background: black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#is_hdr .hdr{
+    padding: 1%;
+}
+#is_hdr .logo-container{
+    padding: 0.8%;
+    background: white;
+}
+#is_hdr .company-name{
+    color: black;
+}
+#is_hdr #nav_links_is .btn_is{
+    color: black;
+    background: var(--color-primario);
+    font-weight: bold;
+}
+.cont_txt_is_col{
+    width: 75%;
+    height: 90%;
+    background: white;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.cont_txt_is_col img{
+    height: 70%;
+    width: auto;
+}
+#inpts_is{
+    width: 73%;
+    height: 80%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+}
+#se_log_is{
+    background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url("../../assets/Backgrounds/bg3.jpg");
+    flex-direction: column;
+    position: relative;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+#inpts_is section{
+    width: 75%;
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 25px;
+    background: rgba(0,0,0,0);
+    height: 12%;
+    color: rgba(0,0,0,0.8);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#inpts_is section .input-group-append button{
+    border: none;
+    background: none;
+    padding: 0;
+    width: 10%;
+}
+#inpts_is section .input-group-append i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#inpts_is section .input-group-append i:hover{
+    transition: 0.2s;
+    color: var(--color-primario);
+}
+#inpts_is section .input-group-append{
+    height: 100%;
+}
+#inpts_is .TituloSHOP{
+    color: black;
+    text-shadow: 3px 3px 1px var(--color-primario);
+}
+#se_log_is{
+    position: relative;
+    z-index: 2;
+}
+.nver{
+    display: none;
+}
+#reg_rg{
+    background: var(--color-primario);
+    color: black;
+    font-weight: bold
+}
+#reg_cont{
+    flex-direction: row-reverse;
+}
+#reg_cont section{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#reg_cont form{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#cont_txt_rg_col{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 80%;
+    height: 90%;
+}
+#cont_reg{
+    height: 90vh;
+    width: 40vw;
+}
+#cont_reg_form{
+    height: 90vh;
+    width: 59vw;
+}
+#cont_img_reg{
+    width: 70%;
+    height: 80%;
+}
+#cont_reg_form section section section{
+    width: 50%;
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0);
+    height: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#cont_reg_form section section{
+    height: 10%;
+}
+#cont_reg_form section section i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#cont_reg_form section section i:hover{
+    transition: 0.2s;
+    color: var(--color-primario);
+}
+#inpts_is section input:focus, #cont_reg_form section section input:focus{
+    font-weight: bold;
+    color: black;
+}
+#inpts_is section input::placeholder, #cont_reg_form section section::placeholder{
+    color: rgba(0,0,0,0.4);
+}
+#inpts_is section input, #cont_reg_form section section input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 1%;
+    height: 100%;
+    border-radius: 20px;
+    background: none;
+    font-size: 1.15rem;
+    color: rgba(0,0,0,0.4);
+}
+.pass_reg{
+    width: 50%;
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0);
+    height: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#cont_txt_rg_col .TituloSHOP{
+    color: black;
+    text-shadow: 3px 3px 1px var(--color-primario);
+}
+#logo_cont_homecl{
+    height: 150%;
 }

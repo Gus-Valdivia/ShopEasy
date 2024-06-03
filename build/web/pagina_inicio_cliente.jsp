@@ -21,11 +21,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./CSS/css.css">
-        <link rel="stylesheet" href="./CSS/noramalize.css">
+        <link rel="stylesheet" href="CSS/General/normalize.css">
+        <link rel="stylesheet" href="CSS/Datos/iniciar_sesion.css">
+        <link rel="stylesheet" href="CSS/css.css">
+        <link rel="stylesheet" href="./CSS/styleInicioSesion.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/002144bd49.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <title>ShopEasy | Compra Facil Y Ahora</title>
     </head>
     <body>
@@ -71,16 +74,16 @@
                 xhr.send();
             }
         </script>
-        <header class="hrd1">
-            <header class="hdr">
-                <div class="logo-container">
+        <header class="hrd1" id="is_hdr">
+            <header class="hdr" id="is_hdr">
+                <a class="logo-container" href="pagina_inicio_cliente.jsp" id="logo_cont_homecl">
                     <img src="./assets/Brand/logo.png" alt="Logo de la empresa" class="logo">
                     <span class="company-name">ShopEasy</span>
-                </div>
+                </a>
                 <nav class="nav-links">
-                    <a href="pagina_inicio_cliente.jsp" class="button button-light">Home</a>
-                    <a href="Carrito.jsp" class="button button-light">Carrito</a>
-                    <a href="#" class="button button-dark" onclick="cerrarSesion()">Cerrar Sesión</a>
+                    <a href="pagina_inicio_cliente.jsp" class="button"><i class="bi bi-house-door-fill"></i> Inicio</a>
+                    <a href="Carrito.jsp" class="button"><i class="bi bi-cart-fill"></i> Carrito</a>
+                    <a href="#" class="button button-dark" onclick="cerrarSesion()">Cerrar Sesión <i class="bi bi-door-open-fill"></i></a>
                 </nav>
             </header>
         </header>
@@ -98,33 +101,16 @@
         </div>
 
         <div class="panel-derecho">
-            <div id="carouselExampleIndicators" class="sectionCarrousel carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active sectionCarrousel">
-                        <img class="d-block w-100" src="./assets/carrousel/easyShop(3).png" alt="First slide">
-                    </div>
-                    <div class="carousel-item sectionCarrousel">
-                        <img class="d-block w-100" src="./assets/carrousel/easyShop(2).png" alt="Second slide">
-                    </div>
-                    <div class="carousel-item sectionCarrousel">
-                        <img class="d-block w-100" src="./assets/carrousel/easyShop.png" alt="Third slide">
-                    </div>
+            <section class="section-container">
+                <span class="bnv_es">Se Bienvenido a <span>ShopEasy</span></span>
+                <div class="TituloPrincipal">
+                    <span class="TituloSHOP">¡La mejor experiencia de compra, justo a tu alcance!</span>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <span class="TituloSHOP2">¡Bienvenido a ShopEasy!</span>
+                <div class="Comentario">
+                    <span class="desc_neg">¡Te damos la bienvenida a ShopEasy, tu aliado para una compra excepcional! Ofrecemos una amplia variedad de productos de alta calidad, asegurando que encuentres siempre lo que necesitas. Con un equipo especializado, te brindamos un servicio personalizado y resolvemos tus dudas para que tu experiencia sea rápida y sencilla. Además, te facilitamos la compra en el mundo digital. ¡Descubre cómo hacer tus compras más fáciles con ShopEasy!</span>
+                </div>
+            </section>
+            <span class="TituloSHOP" id="txt">¡Bienvenido a ShopEasy!</span>
 
             <script>
                 function search_product() {
@@ -151,7 +137,10 @@
                     <% byte[] imageData = producto.getImagen();
                         String base64Image = imageData != null
                                 ? java.util.Base64.getEncoder().encodeToString(imageData) : "";%>
-                    <img src="data:image/jpeg;base64, <%= base64Image%>" alt="<%= producto.getNombre()%>">
+                    <section class="img_pro_card">
+                        <img class="img_log_pc" src="assets/Brand/logo.png" alt="alt"/>
+                        <img src="data:image/jpeg;base64, <%= base64Image%>" alt="<%= producto.getNombre()%>">
+                    </section>
                     <h3><%= producto.getNombre()%></h3>
                     <p>$ <span><%=producto.getPrPrecio()%></span></p>
                 </div>

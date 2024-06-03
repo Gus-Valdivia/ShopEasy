@@ -11,7 +11,7 @@ public class Conexion {
     public static Connection getConnection() {
         String url = "jdbc:mysql://localhost:3306/shopEasy";
         String username = "root";
-        String password = "alesonic111.";
+        String password = "20232707SQL.";
 
         Connection con = null;
 
